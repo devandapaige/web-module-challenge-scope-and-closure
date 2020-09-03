@@ -55,30 +55,46 @@ logicRiddle(5);
 
 //Task #3 :::
 
-
 //information from: https://medium.com/@shaistha24/functional-programming-vs-object-oriented-programming-oop-which-is-better-82172e53a526#:~:text=Both%20Functional%20programming%20and%20object,data%20is%20stored%20in%20objects. //
-const functionalProg = [{
-  definition:'emphasizes on evaluation of functions.',
-  data: 'uses immutable data',
-  model: 'does follow declarative programming model.',
-  support: 'parallel programming supported',
-  execution: 'the statements can be executed in any order',
-  iteration: 'recursion is used for iterative data',
-  element: 'the basic elements are variables and functions',
-  use: 'used when there are a few things with more operations -- function driven',
-  pros: 'reusable', 'flexible', 'allows for ',
-  cons: '',
-}];
-const objectOrientedProg = [{
-  definition: 'based on concept of objects',
-  data: 'uses mutable data',
-  model: 'follows imperative programming model',
-  support: 'does NOT support parallel programming',
-  execution: 'statements should be executed in a particular order',
-  iteration: 'loops are used for iterative data',
-  element: 'the basic elements are objects and methods',
-  use: 'used when there are many thing with few operations -- data driven'
-}];
+const functionalProg = [
+  {
+    definition: "emphasizes on evaluation of functions.",
+    data: "uses immutable data",
+    model: "does follow declarative programming model.",
+    support: "parallel programming supported",
+    execution: "the statements can be executed in any order",
+    iteration: "recursion is used for iterative data",
+    element: "the basic elements are variables and functions",
+    use:
+      "used when there are a few things with more operations -- function driven",
+    pros:
+      "reusable, flexible, allows for heavy function use, supports parallel programming",
+    cons: "not ideal for unique data, immutable",
+  },
+];
+const objectOrientedProg = [
+  {
+    definition: "based on concept of objects",
+    data: "uses mutable data",
+    model: "follows imperative programming model",
+    support: "does NOT support parallel programming",
+    execution: "statements should be executed in a particular order",
+    iteration: "loops are used for iterative data",
+    element: "the basic elements are objects and methods",
+    use: "used when there are many thing with few operations -- data driven",
+    pros:
+      "uses mutable data, uses objects and other forms of data, ideal for unique 'project based' programming",
+    cons:
+      "not reusable programming, would need to create a newly brand new code for every project, parallel programming is not supported",
+  },
+];
+const prosCons = function (object1, object2) {
+  console.log(`Functional Programming >>>`);
+  console.log(object1);
+  console.log(`Object Oriented Programming >>>`);
+  console.log(object2);
+};
+prosCons(functionalProg, objectOrientedProg);
 
 //Just playing around//
 const nelsonFam = ["Alex", "Amanda", "Clementine", "Kiwi"];
