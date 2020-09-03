@@ -56,8 +56,6 @@ function counter2() {
   return count++;
 }
 
-console.log(count);
-
 /* Task 2: inning() 
 
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
@@ -90,16 +88,16 @@ function finalScore(inningfunct, num) {
     away += inningfunct();
   }
 
-  console.log(`Home: ${home}, Away: ${away}`);
+  return `Final Score: Home: ${home}, Away: ${away}`;
 }
 
-finalScore(inning, 9);
+console.log(finalScore(inning, 9));
 
 /* Task 4: 
 
 Create a function called `scoreboard` that accepts the following parameters: 
 
-(1) Callback function `getInningScore`
+(1) Callback function `finalScore`
 (2) Callback function `inning`
 (3) A number of innings
 
@@ -115,6 +113,32 @@ and returns the score at each pont in the game, like so:
 9th inning: awayTeam - homeTeam
 Final Score: awayTeam - homeTeam */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(finalScore, inning, num) {
+  let home = 0;
+  let away = 0;
+  for (let i = 1; i <= num; i++) {
+    /* This doesn't seem to work with the finalScore */
+    //home = (finalScore(inning,i))
+    //away = (finalScore(inning,i));
+    home += inning();
+    away += inning();
+    if (i === 1) {
+      console.log(`${i}st inning: ${away} - ${home}`);
+    } else if (i === 2) {
+      console.log(`${i}nd inning: ${away} - ${home}`);
+    } else if (i === 3) {
+      console.log(`${i}rd inning: ${away} - ${home}`);
+    } else {
+      console.log(`${i}th inning: ${away} - ${home}`);
+    }
+  }
+  if (away > home) {
+    console.log(`Away team wins! 🙌`);
+  } else if (home > away) {
+    console.log(`Home team wins!!! 🎉🎉`);
+  } else {
+    console.log(`It's a tie! 🎀`);
+  }
+  return `Final Score: ${away} - ${home}`;
 }
+console.log(scoreboard(finalScore, inning, 9));
