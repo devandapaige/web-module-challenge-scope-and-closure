@@ -99,6 +99,6 @@ prosCons(functionalProg, objectOrientedProg);
 //Just playing around//
 const nelsonFam = ["Alex", "Amanda", "Clementine", "Kiwi"];
 const whosFault = function (array, index) {
-  console.log(`It's always ${array[index]}'s fault.`);
+  console.log(`Its always ${array[index]}'s fault.`);
 };
 whosFault(nelsonFam, 3);

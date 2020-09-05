@@ -66,16 +66,16 @@ dansRoll();
 
 a. Where is closure used in this code? How can you tell?
 
-> > > Closure is where "name" is pulled into the second function. I can tell this because "name" is defined in the main scope of the personalDice function but then used and closed in the inner function in the console.log.
-> > > newRoll would not be an example of closure since the variable is created within the same scope of the inner function.
+Closure is where "name" is pulled into the second function. I can tell this because "name" is defined in the main scope of the personalDice function but then used and closed in the inner function in the console.log.
+newRoll would not be an example of closure since the variable is created within the same scope of the inner function.
 
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
 
-> > > in 'dansRoll' the text of "Dan rolled a " will remain the same, where "Dan" is dependent on the name paramater. The thing that would change would be the
+in 'dansRoll' the text of "Dan rolled a " will remain the same, where "Dan" is dependent on the name paramater. The thing that would change would be the
 
 c. What is the lexical scope of `newRoll`?
 
-> > > The lexical scope of `newRoll` is the whole "personalDice" function since it is within the child function of this returned function.
+The lexical scope of `newRoll` is the whole "personalDice" function since it is within the child function of this returned function.
 
 ### Task 2c - Exit Ticket ✅✅
 
